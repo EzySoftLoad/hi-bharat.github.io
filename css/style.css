@@ -461,6 +461,17 @@ hr.center-diamond:before {
   }
 }
 
+@media (min-width: 360px) and (max-width: 767px) {
+  .control {
+    position: fixed;
+    right: -4rem;
+    top: 18%;
+    -webkit-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+    z-index: 1000;
+  }
+}
+
 /*****Hero section****/
 #home.typed-text {
   color: var(--white);
@@ -1541,6 +1552,18 @@ ol.content {
   position: relative;
 }
 
+#contact-form-advanced .contact-form:before {
+  content: "";
+  position: absolute;
+  width: 110px;
+  height: 100px;
+  border: 22px solid var(--customColor);
+  border-radius: 50%;
+  bottom: -77px;
+  right: 50px;
+  opacity: 0.3;
+}
+
 #contact-form-advanced .circle {
   border-radius: 50%;
   background: linear-gradient(135deg, transparent 20%, #149279);
@@ -1591,7 +1614,7 @@ ol.content {
   text-decoration: none;
 }
 
-#contact-form-advance .information p {
+#contact-form-advanced .information p {
   color: var(--secondaryColor);
   font-weight: 500;
 }
@@ -1610,14 +1633,14 @@ ol.content {
   font-size: 20px;
 }
 
-#contact-form-advanced .social-icons {
+#contact-form-advanced .social-media .social-icons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-top: 0.5rem;
 }
 
-#contact-form-advanced .social-icons a {
+#contact-form-advanced .social-media .social-icons a {
   width: 35px;
   height: 35px;
   border-radius: 5px;
@@ -1630,21 +1653,9 @@ ol.content {
   transition: 0.3s;
 }
 
-#contact-form-advanced .social-icons a:hover {
+#contact-form-advanced .social-media .social-icons a:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
-}
-
-#contact-form-advanced .contact-info:before {
-  content: "";
-  position: absolute;
-  width: 110px;
-  height: 100px;
-  border: 22px solid var(--customColor);
-  border-radius: 50%;
-  bottom: -77px;
-  right: 50px;
-  opacity: 0.3;
 }
 
 #contact-form-advanced .big-circle {
@@ -2027,6 +2038,199 @@ ol.content {
 @media only screen and (min-width: 768px) and (max-width: 1400px) {
   #footer-mob {
     display: none;
+  }
+}
+
+.sidebar-form {
+  position: fixed;
+  top: 55%;
+  right: -350px;
+  z-index: 99;
+  padding: 10px;
+  width: 350px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  border-radius: 8px 0 0 8px;
+  background: var(--customColor);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: right 0.4s linear;
+  transition: right 0.4s linear;
+}
+
+.sidebar-form p {
+  font-size: 14px;
+  color: var(--white);
+  font-style: italic;
+  padding: 5px;
+  line-height: 1.2;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: left;
+}
+
+.sidebar-form.show {
+  right: 0;
+}
+
+.sidebar-form .call-action {
+  position: absolute;
+  background: -webkit-gradient(linear, left top, right top, from(#f3683d), to(#ffc107e6));
+  background: linear-gradient(90deg, #f3683d, #ffc107e6);
+  font-family: "roboto";
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: var(--white);
+  width: 150px;
+  font-size: 18px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  cursor: pointer;
+  left: -90px;
+  top: 50%;
+  border-radius: 10px 10px 0 0;
+  -webkit-transform: translateY(-50%) rotate(-90deg);
+          transform: translateY(-50%) rotate(-90deg);
+}
+
+.sidebar-form .form-group {
+  margin-bottom: 10px;
+}
+
+.sidebar-form .form-group label {
+  font-family: "roboto";
+  font-weight: 500;
+  font-size: 15px;
+  margin-bottom: 2px;
+  color: var(--white);
+}
+
+.sidebar-form .form-group input {
+  font-family: "roboto";
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--black);
+}
+
+.sidebar-form .form-control {
+  line-height: 1.5;
+}
+
+.sidebar-form #submit-btn {
+  width: 100%;
+  text-align: center;
+  border: none;
+  margin-top: 8px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  background: -webkit-gradient(linear, left top, right top, from(#f3683d), to(#ffc107e6));
+  background: linear-gradient(90deg, #f3683d, #ffc107e6);
+  color: var(--white);
+  padding: 6px;
+  font-family: "roboto";
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.sidebar-form textarea.input {
+  min-height: 100px;
+  overflow-y: auto;
+}
+
+.sidebar-form input {
+  color: var(--white);
+}
+
+/*Side bar contact form*/
+@media (max-width: 768px) {
+  .sidebar-form {
+    position: fixed;
+    top: 50%;
+    right: -300px;
+    z-index: 99;
+    padding: 10px;
+    width: 300px;
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    border-radius: 8px 0 0 8px;
+    background: var(--customColor);
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    -webkit-transition: right 0.4s linear;
+    transition: right 0.4s linear;
+  }
+  .sidebar-form p {
+    font-size: 12px;
+    color: var(--white);
+    font-style: italic;
+    padding: 5px;
+    line-height: 1.2;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: left;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 767px) {
+  .sidebar-form {
+    position: fixed;
+    top: 50%;
+    right: -250px;
+    z-index: 99;
+    padding: 10px;
+    width: 250px;
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    border-radius: 8px 0 0 8px;
+    background: var(--customColor);
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    -webkit-transition: right 0.4s linear;
+    transition: right 0.4s linear;
+  }
+  .sidebar-form p {
+    font-size: 12px;
+    color: var(--white);
+    font-style: italic;
+    padding: 5px;
+    line-height: 1.2;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: left;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .sidebar-form {
+    position: fixed;
+    top: 40%;
+    right: -250px;
+    z-index: 99;
+    padding: 10px;
+    width: 250px;
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    border-radius: 8px 0 0 8px;
+    background: var(--customColor);
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    -webkit-transition: right 0.4s linear;
+    transition: right 0.4s linear;
+  }
+  .sidebar-form p {
+    font-size: 12px;
+    color: var(--white);
+    font-style: italic;
+    padding: 5px;
+    line-height: 1.2;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: left;
   }
 }
 /*# sourceMappingURL=style.css.map */
