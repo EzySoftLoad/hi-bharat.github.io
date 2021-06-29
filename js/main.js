@@ -118,3 +118,10 @@ document.addEventListener("contextmenu",event=>event.preventDefault());
 
 
 // download link:https://drive.google.com/uc?id=1U7DPlnGe6udxF0VhTbalmC0nGPQqD5h7&export=download
+
+//sidebar form
+$(document).ready(function(){
+$(".sidebar-form .call-action").click(function(){
+$(this).parents(".sidebar-form").toggleClass("show");
+});
+});
